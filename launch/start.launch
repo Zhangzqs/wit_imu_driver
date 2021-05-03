@@ -1,4 +1,5 @@
 <launch>
     <node pkg="wit_imu_driver" type="wit_imu_driver" name="imu" output="screen">
+        <remap from="/data_raw" to="/imu_data"/>
     </node>
 </launch>
