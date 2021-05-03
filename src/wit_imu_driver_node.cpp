@@ -50,8 +50,8 @@ public:
     {
         std::string dev;
         int baud;
-        pnh_.param<std::string>("device", dev, "/dev/ttyUSB0");
-        pnh_.param<int>("baud", baud, 9600);
+        pnh_.param<std::string>("serial_port", dev, "/dev/ttyUSB0");
+        pnh_.param<int>("baud_rate", baud, 9600);
 
         boost::system::error_code ec;
         port_.open(dev, ec);
@@ -295,7 +295,7 @@ private:
         if (port_.is_open())
         {
             ROS_ERROR("Timeouted. No data received from IMU.");
-            ros::shutdown();
+            //ros::shutdown();
         }
     }
 

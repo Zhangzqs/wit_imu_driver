@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="wit_imu_driver" type="wit_imu_driver" name="imu" output="screen">
+    </node>
+</launch>
